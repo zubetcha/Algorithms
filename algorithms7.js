@@ -28,37 +28,6 @@
 // bList = 음수들의 집합
 // aList + bList 각 배열 합쳐서 for문 abList[i]
 
-
-function solution(absolutes, signs) {
-    let sumPositive = 0;
-    let sumNegative = 0;
-    if (signs.indexOf(true) != -1) {
-        for (let i = 0; i < absolutes.length; i++) {
-            sumNegative += absolutes[i];
-        }
-    } else {
-        for (let i = 0; i < absolutes.length; i++) {
-            sumPositive += absolutes[i];
-        }
-    }
-    return  sumPositive - sumNegative;
-}
-
-function solution(absolutes, signs) {
-    let totalSum = 0;
-    let posiSum = 0;
-    let negaSum = 0;
-    for (let i = 0; i < absolutes.length; i++) {
-        totalSum += absolutes[i];
-        if (signs.indexOf(true) != -1) {
-            negaSum += absolutes[i];
-        } else {
-            posiSum = totalSum - negaSum;
-        }
-    }
-    return posiSum - negaSum;
-}
-
 function solution(absolutes, signs) {
     let posiSum = 0;
     let negaSum = 0;
