@@ -30,10 +30,10 @@
 function solution(arr, divisor) {
     let answer = [];
     for (let i = 0; i < arr.length; i++) {
-        if (arr[i] % divisor == 0) {
+        if (arr[i] % divisor === 0) {
             answer.push(arr[i]);
         }
-        if (answer.length == 0) {
+        if (answer.length === 0) {
             answer.push(-1)
         }
     }
@@ -48,22 +48,9 @@ function solution(arr, divisor) {
 
 
 // 정수 i, j에 대해 i ≠ j 이면 arr[i] ≠ arr[j] 입니다.
+// arr.length 배열의 길이와 set 객체의 크기도 일치해야 함 arr[i] ≠ arr[j]
 // new Set([literable]); >> 중복을 허용하지 않는 값을 모아놓은 collection 객체
 // new 연산자를 사용하여 생성
 
-function solution(arr, divisor) {
-    let answer = [];
-    let set = new Set(arr);
-    for (let i = 0; i < arr.length; i++) {
-        // arr.length 배열의 길이와 set 객체의 크기도 일치해야 함 arr[i] ≠ arr[j]
-        if (arr[i] % divisor === 0 && arr.length == set.size) {
-            answer.push(arr[i]);   
-        }        
-    }
-         if (answer.length === 0) {
-            answer.push(-1);
-        }
-    return answer.sort(function(a, b) {
-        return a-b;
-    });
-}
+
+// arr.length 배열의 길이와 set 객체의 크기도 일치해야 함 arr[i] ≠ arr[j]
