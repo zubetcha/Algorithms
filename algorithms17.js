@@ -1,3 +1,5 @@
+// 프로그래머스 - 문자열 다루기 기본
+
 // 문제 설명
 // 문자열 s의 길이가 4 혹은 6이고, 
 // 숫자로만 구성돼있는지 확인해주는 함수, solution을 완성하세요. 
@@ -11,7 +13,6 @@
 // "1234"	true
 
 // 문자열 s의 status > 숫자로만 되어 있음 
-// indexOf > 숫자로만 구성되어 있다면 -1 반환
 // (s.length == 4 || 6) && s의 status => true
 // else false
 // output => boolean
@@ -20,6 +21,36 @@ function solution(s) {
     if (s.match(/[^0-9]/)) {
         return false;
     } else if (s.length === 4 || s.length === 6) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function solution(s) {
+    if (s.match(/^[0-9]/)) { 
+        if (s.length === 4 || s.length === 6) {
+            return true;
+        } else {
+            return fa
+        }
+    } else {
+        return false;
+    }
+}
+
+function solution(s) {
+    if ( (s.match(/^[0-9]/)) && (s.length === 4 || s.length === 6)) { 
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function solution(s) {
+    if (isNaN(s)) {
+        return false;
+    } else if ((s.match(/^[0-9]/)) && (s.length === 4 || s.length === 6)) {
         return true;
     } else {
         return false;

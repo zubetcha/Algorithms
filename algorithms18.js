@@ -1,3 +1,5 @@
+// 프로그래머스 서울에서 김서방 찾기
+
 // 문제 설명
 // String형 배열 seoul의 element중 "Kim"의 위치 x를 찾아, 
 // "김서방은 x에 있다"는 String을 반환하는 함수, solution을 완성하세요. 
@@ -18,6 +20,8 @@ function solution(seoul) {
     return "김서방은 " + x + "에 있다";
 }
 
+
+// for문 활용
 function solution(seoul) {
     for (let i = 0; i < seoul.length; i++) {
         if (seoul[i] === "Kim") {

@@ -1,3 +1,5 @@
+// 프로그래머스 - 완주하지 못한 선수
+
 // 문제 설명
 // 수많은 마라톤 선수들이 마라톤에 참여하였습니다. 
 //단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.
@@ -27,9 +29,11 @@
 // "mislav"는 참여자 명단에는 두 명이 있지만, 
 // 완주자 명단에는 한 명밖에 없기 때문에 한명은 완주하지 못했습니다.
 
+
 // 완주하지 못한 사람의 이름 name
 // name은 completion 리스트에 있을 수도, 없을 수도 있음
 // completion.length = participant.length - 1;
+
 
 // 1) name이 동명이인이 아닌 경우, participant[i] !== completion[j]
 // 2) name이 동명이인인 경우, participant 배열의 name 중복 개수와, completion 배열의 name 중복 개수가 다름

@@ -1,5 +1,8 @@
+// 프로그래머스 - 행렬의 덧셈
+
 // 문제 설명
-// 행렬의 덧셈은 행과 열의 크기가 같은 두 행렬의 같은 행, 같은 열의 값을 서로 더한 결과가 됩니다. 2개의 행렬 arr1과 arr2를 입력받아, 행렬 덧셈의 결과를 반환하는 함수, solution을 완성해주세요.
+// 행렬의 덧셈은 행과 열의 크기가 같은 두 행렬의 같은 행, 같은 열의 값을 서로 더한 결과가 됩니다. 
+// 2개의 행렬 arr1과 arr2를 입력받아, 행렬 덧셈의 결과를 반환하는 함수, solution을 완성해주세요.
 
 // 제한 조건
 // 행렬 arr1, arr2의 행과 열의 길이는 500을 넘지 않습니다.
@@ -26,6 +29,16 @@ function solution(arr1, arr2) {
         }
         return answer;
     }
+}
+
+function solution(arr1, arr2) {
+    let answer = [];
+    for (let i = 0; i < arr1.length; i++) {
+        if ( arr1.length == arr2.length && arr1[i].length == arr2[i].length) {
+            answer.push(arr1[i].map((x, y) => arr1[i][y] + arr2[i][y]));
+        }
+    }
+    return answer;
 }
 
 // 오답 > arr1이 아닌 arr1[i]에서 map을 사용했기 때문에 for문 arr1의 i번째를 둘러줘야 함
