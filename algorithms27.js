@@ -1,3 +1,5 @@
+// 프로그래머스 - 콜라츠 추측
+
 // 문제 설명
 // 1937년 Collatz란 사람에 의해 제기된 이 추측은, 
 // 주어진 수가 1이 될때까지 다음 작업을 반복하면, 
@@ -39,7 +41,7 @@
 function solution(num) {
     let i = 0;
     while (i <= 500) {
-        if (num === 1) { // num이 최초에 1로 주어지거나, 여러 번 반복 끝에 num이 1이 됐을 때
+        if (num === 1) { // num이 최초에 1로 주어지거나, 여러 번 반복 끝에 num이 1이 됐을 때 탈출
             break;
         }
         else if (num % 2 === 0) { // num이 짝수일 때
@@ -49,7 +51,7 @@ function solution(num) {
             num = num * 3 + 1; // num이 1이 아니면서 홀수일 때
         }
         i++;
-        if (i > 500) {
+        if (i > 500) { // i++가 완료된 후 count
             return -1;
         }
     }
