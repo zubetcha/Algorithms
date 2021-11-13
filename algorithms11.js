@@ -29,3 +29,21 @@ function solution(x, n) {
     return answer;
 }
 
+
+// 두 번째 풀었을 때
+
+
+function solution(x, n) {
+    let result = [];
+    let num = 0;
+    for (let i = 0; i < n; i++) {
+        num += x;
+        result.push(num);
+    }
+    return result;
+}
+
+// x 값 고정
+// x += x 고정 값
+// loop n까지
+// 빈 배열에 push

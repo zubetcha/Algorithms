@@ -44,3 +44,28 @@ function solution(s){
         return false;
     }
 }
+
+
+// 두 번째 풀었을 때
+
+
+function solution(s){
+    s = s.toLowerCase();
+    let pQty = 0;
+    let yQty = 0;
+    for (let i = 0; i < s.length; i++) {
+        if (s[i] === 'p') {
+            pQty += 1;
+        }
+        else if (s[i] === 'y') {
+            yQty += 1;
+        }
+    }
+    return pQty === yQty ? true : false;
+}
+
+// 문자열 s를 대문자 또는 소문자로 변환
+// p와 y 각각의 개수를 담을 숫자형 변수 pQty, yQty
+// s.length 만큼 반복하면서 p와 일치하면 pQty +1
+// s.length 만큼 반복하면서 y와 일치하면 yQty +1
+// pQty === yQty || (pQty && yQty) === 0 ? true : false

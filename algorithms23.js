@@ -26,3 +26,15 @@ function solution(n) {
     }
     return answer;
 }
+
+
+// 두 번째 풀었을 때
+
+
+function solution(n) {
+    let arr = [];
+    for (let i = String(n).length - 1; i >= 0; i--) {
+        arr.push(parseInt(String(n)[i]));
+    }
+    return arr;
+}

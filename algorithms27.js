@@ -57,3 +57,27 @@ function solution(num) {
     }
     return i;
 }
+
+
+
+// 두 번째 풀었을 때
+
+
+function solution(num) {
+    let i = 0;
+    for (i = 0; i < 501; i++) {
+        if (num === 1) {
+            return i;
+        }
+        else if (num % 2 !== 0 && num !== 1) {
+            num = num * 3 + 1;
+        }
+        else {
+            num /= 2;
+        }
+    }
+    if (i > 500) {
+        return -1;
+    }
+}
+

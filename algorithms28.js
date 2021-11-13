@@ -32,21 +32,38 @@
 // 문자열 x의 각 인덱스의 요소를 loop를 통해 각 인덱스의 요소를 정수형으로 변환하면서 더해줌 parseInt()
 // x를 누산된 sum으로 나눴을 때 나머지가 0이 나오면 하샤드 수
 
+// 11 '11'
+
+3245346456
+
+
 
 function solution(x) {
     let sum = 0;
     for (let i = 0; i < String(x).length; i++) {
-        sum += parseInt(String(x)[i]);
+        sum += (String(x)[i]); 
     }
     return x % sum === 0? true : false;
 }
-
 
 function solution(x) {
-    let strX = String(x);
     let sum = 0;
-    for (let i = 0; i < strX.length; i++) {
-        sum += parseInt(strX[i]);
+    let str = String(x);
+    for (let i = 0; i < str.length; i++) {
+        sum += parseInt(str[i]); 
     }
     return x % sum === 0? true : false;
 }
+
+// x = 12;
+// let str = String(x);
+// str = '12';
+// str.length = 2 
+// 0, 1
+// str[0] = '1'
+// str[2] = '2'
+// let sum = '';
+// str = '12' 
+
+1   2   = 3
+

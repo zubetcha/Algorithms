@@ -26,6 +26,6 @@ function solution(a, b) {
     let monthSum = 0;
     for (let i = 0; i < a-1; i++) {
         monthSum += monthDays[i]
-    }
+    } 
     return days[(monthSum + b) % 7];
-}
+} 

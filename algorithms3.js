@@ -43,3 +43,19 @@ function solution(text) {
     let index = cnt/2;
     return cnt % 2 == 0 ? text.slice(index-1, index+1) : text.charAt(Math.floor(cnt/2))
 }
+
+
+// 두 번째 풀었을 때
+
+
+function solution(s) {
+    return s.length % 2 === 0 ? s[s.length / 2 - 1] + s[s.length / 2] : s[s.length / 2 - 0.5];
+}
+
+
+// if s.length % 2 === 0 => 가운데 두 글자 반환
+// s[s.length/2 - 1], s[s.length/2] 글자 반환하면 됨
+// else => 가운데 한 글자 반환
+// s[s.length/2 - 0.5] 글자 반환
+
+

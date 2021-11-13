@@ -38,7 +38,7 @@ function solution(arr, divisor) {
         }
         if (answer.length === 0) {
             answer.push(-1)
-        }
+        }g
     }
     return answer.sort(function(a, b) {
         return a-b;
@@ -72,3 +72,21 @@ function solution(arr, divisor) {
 
 
 // arr.length 배열의 길이와 set 객체의 크기도 일치해야 함 arr[i] ≠ arr[j]
+
+
+// 두 번째 풀었을 때
+
+
+function solution(arr, divisor) {
+    let answer = [];
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % divisor === 0) {
+            answer.push(arr[i]);
+        }
+    }
+    return answer.length === 0 ? [-1] : answer.sort(function(a, b) {return a - b;});
+}
+
+// if arr[i] % divisor === 0 ? answer.push(arr[i]).오름차순 정렬
+// if answer.length === 0 ? answer.push(-1)
+// arr 배열에는 중복되는 값 X

@@ -39,3 +39,21 @@ function solution(numbers) {
 }
 
 // .reduce 메소드 사용해서도 작성 가능
+
+
+// 두 번째 풀었을 때
+
+
+function solution(numbers) {
+    let sum = 0;
+    for (let i = 0; i < 10; i++) {
+        if (numbers.includes(i) == false) {
+            sum += i;
+        }
+    }
+    return sum;
+}
+
+// numbers에 없는 숫자 모두 더한 값 sum
+// loop > i 가 0부터 9까지 돌면서 i 가 numbers 배열에 없으면 sum에 i 더하기
+// arr.include() > 배열 속에 해당 원소가 있으면 true, 없으면 false 반환

@@ -37,3 +37,29 @@ function solution(a, b) {
 
 // 메소드 사용하는 방법 있음 
 // Math.min, Math.max
+
+
+// 두 번째 풀었을 때
+
+
+function solution(a, b) {
+    let sum = 0;
+    if (a > b) {
+        for (let i = b; i < a + 1; i++) {
+            sum += i;
+        }
+    } else if (b > a) {
+        for (let i = a; i < b + 1; i++) {
+            sum += i;
+        }
+    } else {
+        return a || b;
+    }
+    return sum;
+}
+
+// case1. a > b
+// case2. a < b
+// case3. a = b
+
+// loop / i가 a부터 b까지 돌면서 1씩 증가하면, i를 임의의 숫자 변수에 누산

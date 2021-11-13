@@ -43,3 +43,18 @@ function solution(a, b) {
     }
     return multi_sum;
 }
+
+
+// 두 번째 풀었을 때
+
+
+function solution(a, b) {
+    let sum = 0;
+    for (let i = 0; i < a.length; i++) {
+        sum+= (a[i] * b[i]);
+    }
+    return sum;
+}
+
+// a.length === b.length
+// 반환되는 값을 담을 변수 sum = 0;

@@ -31,3 +31,22 @@ function solution(n) {
     }
     return answer;
 }
+
+
+// 두 번째 풀었을 때
+
+
+function solution(n) {
+    let strN = String(n);
+    let sum = 0;
+    for (let i = 0; i < strN.length; i++) {
+        sum += parseInt(strN[i]);
+    }
+    return sum;
+}
+
+
+// N > 0, N % 1 === 0 
+// 결과값 숫자형 변수 sum = 0;
+// N 을 문자열로 만든 후 loop
+// [i] 번째를 정수형으로 변환하여 sum에 계속해서 더해주기

@@ -56,3 +56,24 @@ function solution(s) {
         return false;
     }
 }
+
+
+// 두 번째 풀었을 때
+
+
+function solution(s) {
+    if (s.match(/[^0-9]/)) {
+        return false;
+    } else if (s.length === 4 || s.length === 6) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// s.length === 4 || 6 && 숫자로만
+// return boolean
+// 숫자로만 되어 있는지 확인하는 방법
+// typeof(Number(s)) !== number ?  false : true;
+
+// loop if isNaN(s) == false && s[i] !== ' ' &&

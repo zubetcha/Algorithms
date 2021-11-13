@@ -50,3 +50,30 @@ function solution(s) {
 // 3-2. wordList = ['TrY', 'HeLlO', 'WoRlD']
 // wordList = ['TrY', 'HeLlO', 'WoRlD']
 // wordList.join(" ") = 'TrY HeLlO WoRlD'
+
+
+// 두 번째 풀었을 때
+
+
+function solution(s) {
+    let arrWord = s.split(' ');
+    let newWord = [];
+    for (let i = 0; i < arrWord.length; i++) {
+        let word = '';
+        for (let j = 0; j < arrWord[i].length; j++) {
+            if (j % 2 == 0) {
+                word += arrWord[i][j].toUpperCase();
+            } else {
+                word += arrWord[i][j].toLowerCase();
+            }
+        }
+        newWord.push(word);
+    }
+    return newWord.join(' ');
+}
+
+// s 를 ' ' 공백 기준으로 split 해서 단어 배열을 만들고
+// arrWord 배열을 loop 로 반복하면서 각 단어 요소를 찾아가고,
+// arrWord[i] 각 단어를 loop 로 반복하면서 알파벳 찾아가기
+// 각 단어의 인덱스 [j]가 짝수일 경우 대문자로, 홀수일 경우 소문자로 변환
+// 완료 후 arrWord[i] 를 strWord로 push

@@ -21,3 +21,23 @@ function solution(phone_number) {
     let head = phone_number.substring(0, -4)
     return '*'.repeat(head.length) + phone_number.substring(-4, 0)
 }
+
+
+// 두 번째 풀었을 때
+
+
+function solution(phone_number) {
+    let result = '';
+    for (let i = 0; i < phone_number.length; i++) {
+        if (i < phone_number.length - 4) {
+            result += '*';
+        }
+        else {
+            result += phone_number[i];
+        }
+    }
+    return result;
+}
+
+
+// index 0 ~ phone-number.length - 5 까지 *

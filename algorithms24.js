@@ -38,3 +38,21 @@ function solution(n) {
     }
     return parseInt(nList.sort(function(a, b) {return b - a;}).join(''));
 }
+
+
+// 두 번째 풀었는 때
+
+
+function solution(n) {
+    let arr = [];
+    for (let i = 0; i < String(n).length; i++) {
+        arr.push(parseInt(String(n)[i]));
+    }
+    return Number(arr.sort(function(a, b) {return b - a}).join(''));
+}
+
+
+// 빈 배열 arr = [];
+// 정수 n을 문자열로 만든 후
+// loop 로 돌면서 n[i] 를 parseInt로 숫자형으로 변환하여 arr.push
+// 완성된 배열 arr을 내림차순으로 정렬 후 join();

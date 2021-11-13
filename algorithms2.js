@@ -31,3 +31,11 @@ function solution(num) {
 function solution(num) {
     return num % 2 ? "Odd" : "Even";
 } 
+
+
+// 두 번째 풀었을 때
+
+
+function solution(num) {
+    return num % 2 === 0? "Even" : "Odd";
+}

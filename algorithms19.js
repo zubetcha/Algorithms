@@ -28,3 +28,19 @@ function solution(n) {
 }
 
 console.log(solution(5))
+
+
+// 두 번째 풀었을 때
+
+
+function solution(n) {
+    let str = '';
+    for (let i = 1; i < n + 1; i++) {
+        i % 2 === 0 ? str += '박' : str += '수';
+    }
+    return str;
+}
+
+// 빈 문자열 변수 str = '';
+// loop i = 1;  n.length + 1 만큼 돌면서
+// i % 2 === 0 ? str += '박' : str += '수';

@@ -19,3 +19,15 @@ function solution(arr) {
     }, 0);
     return result / arr.length;
 }
+
+
+// 두 번째 풀었을 때
+
+
+function solution(arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum / arr.length;
+}

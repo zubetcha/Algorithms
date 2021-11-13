@@ -41,3 +41,19 @@ function solution(price, money, count) {
         return 0;
     }
 }
+
+
+// 두 번째 풀었을 때
+
+
+function solution(price, money, count) {
+    let sum = 0;
+    for (let i = 1; i < count + 1; i++) {
+        sum += (price * i);
+    }
+    return sum > money ? sum - money : 0;
+}
+
+// price += price;
+// loop i는 count까지 
+// if 모자르면 return 모자란 금액 sum - money, else return 0
