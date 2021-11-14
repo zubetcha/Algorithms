@@ -34,9 +34,6 @@
 
 // 11 '11'
 
-3245346456
-
-
 
 function solution(x) {
     let sum = 0;
@@ -65,5 +62,5 @@ function solution(x) {
 // let sum = '';
 // str = '12' 
 
-1   2   = 3
+
 
