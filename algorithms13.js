@@ -23,9 +23,9 @@
 function solution(a, b) {
     let days = ['THU', 'FRI', 'SAT', 'SUN', 'MON', 'TUE', 'WED'];
     let monthDays = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-    let monthSum = 0;
+    let monthSum = 0;   
     for (let i = 0; i < a-1; i++) {
         monthSum += monthDays[i]
-    } 
+    }
     return days[(monthSum + b) % 7];
-} 
+}

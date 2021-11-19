@@ -29,6 +29,7 @@
 // spread 연산자 (...arr) 사용 
 // spread 연산자 (...) 는 배열, 문자열 등을 개별 요소로 분리해줌
 // Math.min(...['5', '8', '2']) = Math.min(5, 8, 2)
+// abcd 'a', 'b'
 
 
 function solution(arr) {
@@ -46,25 +47,3 @@ function solution(arr) {
     }
 }
 
-
-// 두 번째 풀었을 때
-
-
-function solution(arr) {
-    let min = Math.min(...arr);
-    for (let i = 0; i < arr.length; i++) {
-        if (arr[i] === min) {
-            let removed = arr.splice(i, 1);
-        }
-    }
-    return arr.length === 0 ? [-1] : arr;
-}
-
-
-// 가장 작은 수 변수 min = 
-// loop if arr[i] === min, arr에서 min을 제거한 배열 return
-// if arr.length = 1, return [-1];
-
-// splice()로 가장 작은 수 min을 제거했기 때문에 원본 배열 arr에는 변형이 일어남
-// 그래서 만약 최초의 arr 배열의 요소가 1개였다면 splice() 메소드로 인해
-// 빈 배열로 변형되기 때문에 arr.length가 1일 때가 아니라 0일 때로 조건문을 써야 함

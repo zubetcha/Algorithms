@@ -34,7 +34,6 @@
 
 // 11 '11'
 
-
 function solution(x) {
     let sum = 0;
     for (let i = 0; i < String(x).length; i++) {
@@ -61,6 +60,3 @@ function solution(x) {
 // str[2] = '2'
 // let sum = '';
 // str = '12' 
-
-
-
