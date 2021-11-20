@@ -46,9 +46,30 @@
 // 명함들을 적절히 회전시켜 겹쳤을 때, 모든 명함을 포함하는 가장 작은 지갑의 크기는 133(=19 x 7)입니다.
 
 function solution(sizes) {
-    var answer = 0;
-    return answer;
+    let width = [];
+    let height = [];
+    sizes.map(([num1, num2]) => {
+        if (num1 > num2) {
+            width.push(num1);
+            height.push(num2);
+        } else {
+            width.push(num2);
+            height.push(num1);
+        }
+    })
+    return Math.max(...width) * Math.max(...height);
 }
 
-// 확실한 방법은 가장 큰 w와 가장 큰 h를 곱하는 것
-// w or h 둘 중 하나는 무조건 배열 안의 배열의 요소 중 가장 큰 수여야 함
+function solution(sizes) {
+    let width = [];
+    let height = [];
+    sizes.map(([num1, num2]) => {
+        num1 > num2? width.push(num1) & height.push(num2)
+        : width.push(num2) & height.push(num1)
+    })
+    return Math.max(...width) * Math.max(...height);
+}
+
+// 모든 작은 배열안의 요소 중 0번째는 큰 수, 1번째는 작은 수가 되게 만듦
+// 각 작은 배열의 0번째 수 중 가장 큰 수 곱하기 1번째 수 중 가장 큰 수
+
