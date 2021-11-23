@@ -33,10 +33,16 @@
 // 따라서 [2,5,7,9,12] 를 return 해야 합니다.
 
 function solution(numbers) {
-    let result = numbers.map((x, i) => {
-
+    let sumArr = [];
+    numbers.forEach((x, i) => {
+        const restArr = numbers.filter((_, j) => j !== i);
+        const sum = restArr.map((y) => x + y)
+        sumArr.push(...sum);
     })
-
+    let result = sumArr.filter((z, k) => {
+        return sumArr.indexOf(z) === k;
+    })
+    return result.sort((a, b) => a - b);
 }
 
 // numbers 배열에 map() 메소드를 사용
