@@ -45,6 +45,3 @@ function solution(numbers) {
     return result.sort((a, b) => a - b);
 }
 
-// numbers 배열에 map() 메소드를 사용
-// 콜백함수는 return 현재 요소 + 다음 인덱스 요소 ~ 현재 요소 + 마지막 인덱스 요소
-// map() 메소드가 반환한 새로운 배열에서 중복값 제거 후 오름차순 return
