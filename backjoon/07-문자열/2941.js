@@ -26,7 +26,5 @@ for (let i = 0; i < word.length; i++) {
   }
 }
 let answer = arr.filter((al) => al !== ' ')
-console.log(word)
-console.log(arr)
-console.log(answer)
+
 console.log(answer.length)
