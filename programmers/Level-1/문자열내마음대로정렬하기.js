@@ -26,6 +26,47 @@
 // "abce"와 "abcd"는 사전순으로 정렬하면 "abcd"가 우선하므로, 답은 ["abcd", "abce", "cdx"] 입니다.
 
 function solution(strings, n) {
-  var answer = []
+  const tempArr = strings.map((str, i) => {
+    return { index: i, value: str }
+  })
+
+  tempArr.sort((a, b) => {
+    return a.value[n] < b.value[n] ? -1 : a.value[n] === b.value[n] ? 0 : 1
+  })
+  console.log(tempArr)
+  // return answer
+}
+
+function solution(strings, n) {
+  const answer = strings.sort((a, b) => {
+    if (a[n] < b[n]) {
+      return -1
+    }
+    if (a[n] === b[n]) {
+      for (let i = 1; i < a.length - n - 1; i++) {
+        if (a[n + i] < b[n + i]) {
+          return -1
+        } else if (a[n + i] === b[n + i]) {
+          return a[n + i + 1] < b[n + i + 1] ? -1 : 1
+        }
+      }
+    }
+  })
   return answer
 }
+
+function solution(strings, n) {
+  const answer = strings.sort((a, b) => {
+    if (a[n] < b[n]) {
+      return -1
+    } else if (a[n] > b[n]) {
+      return 1
+    } else {
+      return a < b ? -1 : a > b ? 1 : 0
+    }
+  })
+  return answer
+}
+
+// strings[i][n] 비교
+// strings 리스트에서 map을 돌면서
