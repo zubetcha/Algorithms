@@ -87,18 +87,18 @@ function solution(record) {
     }
   })
 
-  record.map((el) => {
+  record.forEach((el) => {
     const behavior = el.split(' ')[0]
     const uid = el.split(' ')[1]
-    switch (behavior) {
-      case 'Enter':
-      // answer.push(`${recordByUid[uid][]}`)
-      case 'Leave':
+    if (behavior === 'Enter') {
+      answer.push(`${recordByUid[uid][recordByUid[uid].length - 1].split(' ')[1]}님이 들어왔습니다.`)
+    }
+    if (behavior === 'Leave') {
+      answer.push(`${recordByUid[uid][recordByUid[uid].length - 1].split(' ')[1]}님이 나갔습니다.`)
     }
   })
 
-  console.log(recordByUid)
-  // return answer
+  return answer
 }
 
 // { [유저 아이디]: 마지막 닉네임 (마지막 Enter 또는 마지막 Change, Change가 없다면 마지막 Enter가 유저의 마지막 닉네임), }
